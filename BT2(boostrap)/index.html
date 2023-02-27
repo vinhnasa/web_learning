@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="row flex-wrap-nowrap">
+        <div class="col-sm-4  bg-dark text-white" style="padding-bottom: 100%;">
+            <div class="col-sm-12  bg-dark text-white">
+                <a class="text-light text-decoration-none" href="#"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="" class="rounded-pill"width="40" height="40"> Admin</a>
+            </div>
+            <hr>
+            <div class="col-sm-12  bg-dark text-white mt-3">
+                <a class="text-light text-decoration-none" href="#"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="" class="rounded-pill"width="40" height="40"> Nguyen Anh Vinh</a>
+            </div>
+            <div class="col-sm-12  bg-dark text-white mt-3">
+                <form class="d-flex">
+                    <input class="form-control me-0" type="text" placeholder="Search">
+                    <button class="btn btn-primary" type="button">Search</button>
+                  </form>
+            </div>
+            <div class="col-sm-12  bg-dark text-white mt-3">
+                <button type="button" class="btn btn-primary dropdown-toggle w-100" data-bs-toggle="dropdown">
+                Trang chu
+                </button>
+            </div>
+            <div class="col-sm-12  bg-dark text-white mt-3">
+                <button type="button" class="btn btn-primary dropdown-toggle w-100" data-bs-toggle="dropdown">
+                Quan ly san pham
+                </button>
+            </div>
+            <div class="col-sm-12  bg-dark text-white mt-3">
+                <input type="radio" class="form-check-input mx-3" id="radio2" name="optradio" value="option2">Danh sach
+                <label class="form-check-label" for="radio2"></label>
+            </div>
+        </div>
+        <div class="col-sm-8 bg-light text-dark">
+            <ul class="nav flex-direction-row">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Trang chu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Dang xuat</a>
+                </li>
+            </ul>
+            <ul class="nav flex-direction-row">
+                <li class="nav-item mx-3">
+                    <h1>Trang chu</h1>
+                </li>
+            </ul>
+            <br>
+            <div class="container-fluid">
+                <div class="col-sm-12 form-group">
+                    <ul class="nav flex-direction-row">
+                        <li class="nav-item">
+                            <strong><label for="text">Ten san pham(*)</label></strong>
+                            <input type="text" class="form-control"  placeholder="Enter product" >
+                            <br>
+                            <strong><label for="text">Mo ta ngan(*)</label></strong>
+                            <br><br>
+                            <textarea name="" id="" cols="100%" rows="6"></textarea>
+                        </li>
+                        <li class="nav-item">
+                            <strong><label for="text">The loai san pham(*)</label></strong>
+                            <select class="form-select w-100">
+                                <option>MacBook</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                              </select>
+                            <br>
+                            <strong><label for="formFile" class="form-label">Chon anh(*)</label></strong>
+                            <input class="form-control" type="file" id="formFile">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+<!-- narrow-hand.surge.sh -->
