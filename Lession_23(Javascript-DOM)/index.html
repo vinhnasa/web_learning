@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-css-only@4.4.1/css/bootstrap.min.css"> -->
+        <style>
+            body > table {
+                width: 80%;
+            }
+            table{
+                border-collapse: collapse;
+            }
+            table.list{
+                width: 100%;
+            }
+            td, th{
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+            input[type="text"], input[type="number"]{
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+        </style>
+</head>
+<body>
+    <div>
+        <label for="">ID</label>
+        <input type="number" id="id">
+    </div>
+    <div>
+        <label for="">Name</label>
+        <input type="text" id="name">
+    </div>
+    <div>
+        <label for="">Age</label>
+        <input type="number" id="age">
+    </div>
+    <div>
+        <button onclick="add()">submit</button>
+    </div>
+    <!-- Tạo table -->
+    <table class="table" id="render">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+    </table>
+
+    <script>
+        // tạo mảng data để lưu trữ Id, Name, Age 
+        var data = []
+        // hàm chạy chương trình
+        function add(){
+            var item_id = document.getElementById("id").value
+            var item_name = document.getElementById("name").value
+            var item_age = document.getElementById("age").value
+
+            var item = {
+                Id: item_id,
+                Name: item_name,
+                Age: item_age
+            }
+
+            let index = data.findIndex((c)=>c.Id == item.Id);
+
+            if(index>=0){
+                data.splice(index, 1, item)
+            }else{
+                data.push(item)
+            }
+
+            render()
+            clearData()
+        }
+        // thêm dữ liệu vào mảng
+        function render(){
+            table =
+            `
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Actions</th>
+            </tr>
+            `
+            for(let i = 0; i < data.length; i++){
+                table += 
+                `
+                <tr>
+                    <td>${data[i].Id}</td>
+                    <td>${data[i].Name}</td>
+                    <td>${data[i].Age}</td>
+                    <th>
+                        <button onclick="deleteItem(${data[i].Id})">Delete</button>
+                        <button onclick="editItem(${data[i].Id})">Edit</button>
+                    </th>
+                </tr>
+                `
+            }
+            //Trả về mã HTML bên trong phần tử còn lại
+            document.getElementById("render").innerHTML = table
+        }
+        // xóa bỏ dữ liệu sau khi submit
+        function clearData(){
+            document.getElementById("id").value = "";
+            document.getElementById("name").value = "";
+            document.getElementById("age").value = "";
+        }
+        // xóa dữ liệu mảng theo id
+        function deleteItem(item){
+            let choice = confirm("Bạn có muốn xóa không!");
+            if (choice == true) {
+                for(let i=0;i<data.length;i++){
+                    if(data[i].Id==item){
+                        data.splice(i,1)
+                        // trả lại dữ liệu mảng sau khi xóa
+                        render()
+                    }
+                }
+            } else {
+                return false
+            }
+        }
+        // chỉnh sửa dữ liệu mảng
+        function editItem(item){
+            for(let i=0;i<data.length;i++){
+                if(data[i].Id==item){
+                    document.getElementById("id").value = data[i].Id;
+                    document.getElementById("name").value = data[i].Name;
+                    document.getElementById("age").value = data[i].Age;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
