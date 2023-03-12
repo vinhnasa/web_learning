@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Tính khoản vay ngân hàng</h2>
+        <form action="">
+            <p>
+                <span class="label">So tien:</span>
+                <input type="text" name="" class="value" id="a">
+            </p>
+            <p>
+                <span class="label">Lai xuat hang nam(%):</span>
+                <input type="text" name="" class="value" id="b">
+            </p>
+            <p>
+                <span class="label">Thoi gian tra(nam):</span>
+                <input type="text" name="" class="value" id="c">
+            </p>
+            <p>
+                <span class="label">So tien phai tra hang thang:</span>
+                <input type="text" name="" class="value" id="kq1" readonly>
+            </p>
+            <p>
+                <span class="label">Tong so tien phai tra:</span>
+                <input type="text" name="" class="value" id="kq2" readonly>
+            </p>
+            <p>
+                <span class="label">Tong so lai phai tra:</span>
+                <input type="text" name="" class="value" id="kq3" readonly>
+            </p>
+            <p>
+                <button class="btn" type="button" onclick="sum()">Tinh</button>
+                <button class="btn" type="button"
+                onclick="reset()">Reset</button>
+                <p id="log"></p>
+            </p>
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
