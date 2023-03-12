@@ -1,0 +1,59 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 15px;
+    width: 460px;
+    margin: 0px auto;
+    border: 2px solid rgb(2, 96, 65);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.container h2{
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    text-align: center;
+    color: rgb(5, 250, 168)
+}
+
+p{
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.label {
+    text-align: left;
+    width: 110px !important;
+    float: left;
+    padding-right: 5px;
+}
+
+p input{
+    width: 250px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-left: 8px;
+}
+
+p button{
+    display: inline-block;
+    width: 67px;
+    padding: 5px;
+    margin-left: 26%;
+    color: white;
+    background-color: rgb(3, 128, 26);
+    border-radius: 5px;
+}
+
+#log{
+    text-align: center;
+    font-style: italic;
+    color: red;
+    line-height: 20px;
+}
+
