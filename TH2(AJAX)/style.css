@@ -1,0 +1,21 @@
+body{
+    background-color: #673AB7;
+    color: white;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    margin-bottom: .5em;
+    margin-top: .5em;
+    border: 1px solid white;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+}
+
+li:hover{
+    background-color: white;
+    color: black;
+}
