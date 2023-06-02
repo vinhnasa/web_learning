@@ -1,63 +1,35 @@
-import axios from 'axios';
+export const FETCH_BOOKS = "FETCH_BOOKS";
+export const FETCH_BOOKS_SUCCESS = "FETCH_BOOKS_SUCCESS";
+export const FETCH_BOOKS_FAILURE = "FETCH_BOOKS_FAILURE";
+export const ADD_BOOK = "ADD_BOOK";
+export const EDIT_BOOK = "EDIT_BOOK";
+export const DELETE_BOOK = "DELETE_BOOK";
 
-const apiUrl = 'http://localhost:3000/tasks';
+export const fetchBooks = () => ({
+  type: FETCH_BOOKS,
+});
 
-export const addTask = (task) => {
-  return (dispatch) => {
-    return axios.post(apiUrl, task).then((response) => {
-      dispatch(createTask(response.data));
-    });
-  };
-};
+export const fetchBooksSuccess = (books) => ({
+  type: FETCH_BOOKS_SUCCESS,
+  payload: books,
+});
 
-export const updateTask = (task) => {
-  return (dispatch) => {
-    return axios.put(apiUrl + '/' + task.id, task).then(() => {
-      dispatch(editTask(task));
-    });
-  };
-};
+export const fetchBooksFailure = (error) => ({
+  type: FETCH_BOOKS_FAILURE,
+  payload: error,
+});
 
-export const deleteTask = (id) => {
-  return (dispatch) => {
-    return axios.delete(apiUrl + '/' + id).then(() => {
-      dispatch(removeTask(id));
-    });
-  };
-};
+export const addBook = (book) => ({
+  type: ADD_BOOK,
+  payload: book,
+});
 
-export const fetchTasks = () => {
-  return (dispatch) => {
-    return axios.get(apiUrl).then((response) => {
-      dispatch(setTasks(response.data));
-    });
-  };
-};
+export const editBook = (book) => ({
+  type: EDIT_BOOK,
+  payload: book,
+});
 
-const createTask = (task) => {
-  return {
-    type: 'ADD_TASK',
-    payload: task,
-  };
-};
-
-const editTask = (task) => {
-  return {
-    type: 'UPDATE_TASK',
-    payload: task,
-  };
-};
-
-const removeTask = (id) => {
-  return {
-    type: 'DELETE_TASK',
-    payload: id,
-  };
-};
-
-const setTasks = (tasks) => {
-  return {
-    type: 'FETCH_TASKS',
-    payload: tasks,
-  };
-};
+export const deleteBook = (id) => ({
+  type: DELETE_BOOK,
+  payload: id,
+});
