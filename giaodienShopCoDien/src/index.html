@@ -1,0 +1,2349 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+    <!-- FONTS -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</head>
+
+<body class="p-0 m-0 bg-gradient-to-t from-[#ffffff] to-[#ffffff] h-screen">
+    <header class="bg-white">
+        <nav class="flex justify-between items-center bg-blue-500">
+            <div class="px-3.5 sm:flex sm:justify-center">
+                <img class="w-4/5 lg:w-full" src="./css/logo.png" alt="...">
+            </div>
+            <div class="nav-links flex w-full md:flex-col justify-center duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%]"
+                style="z-index: 2;">
+                <ul class="hidden lg:flex lg:flex-row text-white w-full py-3.5 justify-around"
+                    style="background-image: url(./css/background-nav.png);">
+                    <div class="flex-row md:flex">
+                        <li
+                            class="flex hover:text-blue-400 text-xs 2xl:text-lg border-r border-white border-opacity-50 pr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                            </svg>
+                            <a href="#" style="color: white; text-decoration: none">&nbsp;0988888999</a>
+                        </li>
+                        <li class="flex hover:text-blue-400 text-xs 2xl:text-lg pl-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21.75 9v.906a2.25 2.25 0 01-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 001.183 1.981l6.478 3.488m8.839 2.51l-4.66-2.51m0 0l-1.023-.55a2.25 2.25 0 00-2.134 0l-1.022.55m0 0l-4.661 2.51m16.5 1.615a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V8.844a2.25 2.25 0 011.183-1.98l7.5-4.04a2.25 2.25 0 012.134 0l7.5 4.04a2.25 2.25 0 011.183 1.98V19.5z" />
+                            </svg>
+                            <a href="#">&nbsp;hotro@shopcodien.com</a>
+                        </li>
+                    </div>
+                    <div class="flex-row md:flex">
+                        <li
+                            class="flex hover:text-blue-400 text-xs 2xl:text-lg border-r border-white border-opacity-50 pr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 01-1.161.886l-.143.048a1.107 1.107 0 00-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 01-1.652.928l-.679-.906a1.125 1.125 0 00-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 00-8.862 12.872M12.75 3.031a9 9 0 016.69 14.036m0 0l-.177-.529A2.25 2.25 0 0017.128 15H16.5l-.324-.324a1.453 1.453 0 00-2.328.377l-.036.073a1.586 1.586 0 01-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 01-5.276 3.67m0 0a9 9 0 01-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25" />
+                            </svg>
+                            <a href="#">&nbsp;Ngôn ngữ</a>
+                        </li>
+                        <li class="flex hover:text-blue-400 text-xs 2xl:text-lg pl-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15m0-3l-3-3m0 0l-3 3m3-3V15" />
+                            </svg>
+                            <a href="#">&nbsp;Upload File</a>
+                        </li>
+                    </div>
+                </ul>
+                <ul class="hidden md:flex md:flex-row lg:hidden text-white w-full py-3.5 justify-around"
+                    style="background-image: url(./css/background-nav.png);">
+                    <div class="flex-row md:flex">
+                        <li
+                            class="flex hover:text-blue-400 text-xs 2xl:text-lg border-r border-white border-opacity-50 pr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                            </svg>
+                            <a href="#" style="color: white; text-decoration: none">&nbsp;0988888999</a>
+                        </li>
+                        <li class="flex hover:text-blue-400 text-xs 2xl:text-lg pl-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21.75 9v.906a2.25 2.25 0 01-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 001.183 1.981l6.478 3.488m8.839 2.51l-4.66-2.51m0 0l-1.023-.55a2.25 2.25 0 00-2.134 0l-1.022.55m0 0l-4.661 2.51m16.5 1.615a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V8.844a2.25 2.25 0 011.183-1.98l7.5-4.04a2.25 2.25 0 012.134 0l7.5 4.04a2.25 2.25 0 011.183 1.98V19.5z" />
+                            </svg>
+                            <a href="#">&nbsp;hotro@shopcodien.com</a>
+                        </li>
+                    </div>
+                    <div class="flex-row md:flex">
+                        <li
+                            class="flex hover:text-blue-400 text-xs 2xl:text-lg border-r border-white border-opacity-50 pr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 01-1.161.886l-.143.048a1.107 1.107 0 00-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 01-1.652.928l-.679-.906a1.125 1.125 0 00-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 00-8.862 12.872M12.75 3.031a9 9 0 016.69 14.036m0 0l-.177-.529A2.25 2.25 0 0017.128 15H16.5l-.324-.324a1.453 1.453 0 00-2.328.377l-.036.073a1.586 1.586 0 01-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 01-5.276 3.67m0 0a9 9 0 01-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25" />
+                            </svg>
+                            <a href="#">&nbsp;Ngôn ngữ</a>
+                        </li>
+                        <li class="flex hover:text-blue-400 text-xs 2xl:text-lg pl-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15m0-3l-3-3m0 0l-3 3m3-3V15" />
+                            </svg>
+                            <a href="#">&nbsp;Upload File</a>
+                        </li>
+                    </div>
+                </ul>
+                <ul id="loo"
+                    class="flex flex-col items-center w-full justify-around md:flex md:flex-row my-4 bg-[url('./css/footer/nen.png')] md:bg-none">
+                    <li class="grid md:hidden">
+                        <div class="p-3 text-center">
+                            Tìm kiếm Tài liệu, Bản vẽ mà bạn đang quan tâm
+                        </div>
+                        <div class="relative mb-4 flex w-full flex-wrap items-stretch">
+                            <input type="search"
+                                class="relative m-0 -mr-0.5 block w-[1px] min-w-0 flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-300 dark:placeholder:text-neutral-700 dark:focus:border-primary"
+                                placeholder="Search" aria-label="Search" aria-describedby="button-addon1"
+                                style="background: #ffffff" />
+
+                            <!--Search button-->
+                            <button
+                                class="relative z-[2] flex items-center rounded-r bg-primary px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-700 hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary-800 active:shadow-lg bg-gray-500"
+                                type="button" id="button-addon1" data-te-ripple-init data-te-ripple-color="light">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                    class="h-5 w-5">
+                                    <path fill-rule="evenodd"
+                                        d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="hover:text-blue-500 text-xs 2xl:text-lg font-semibold hover:shadow-md text-center">
+                        <a href="#">VỀ CHÚNG TÔI</a>
+                    </li>
+                    <li class="hover:text-blue-500 text-xs 2xl:text-lg font-semibold hover:shadow-md text-center">
+                        <a href="#">QUY ĐỊNH CHUNG</a>
+                    </li>
+                    <li class="hover:text-blue-500 text-xs 2xl:text-lg font-semibold hover:shadow-md text-center">
+                        <a href="#">CHÍNH SÁCH</a>
+                    </li>
+                    <li class="hover:text-blue-500 text-xs 2xl:text-lg font-semibold hover:shadow-md text-center">
+                        <a href="#">HƯỚNG DẪN</a>
+                    </li>
+                    <li class="hover:text-blue-500 text-xs 2xl:text-lg font-semibold hover:shadow-md text-center">
+                        <a href="#">TIN TỨC</a>
+                    </li>
+                    <li class="hover:text-blue-500 text-xs 2xl:text-lg font-semibold hover:shadow-md text-center">
+                        <a href="#">HỢP TÁC</a>
+                    </li>
+                    <li
+                        class="flex bg-blue-500 text-white rounded-none hover:bg-yellow-500 px-3.5 py-2 text-xs 2xl:text-lg font-semibold hover:shadow-md text-center shadow-2xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                        </svg>
+                        <button>&nbsp;Đăng Nhập</button>
+                    </li>
+                    <li
+                        class="flex bg-orange-500 text-white rounded-none hover:bg-green-500 px-3.5 py-2 text-xs 2xl:text-lg font-semibold hover:shadow-md text-center shadow-2xl animate-pulse">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+                        </svg>
+                        <button>&nbsp;Nạp Tiền</button>
+                    </li>
+                    <li>
+                        <div class="flex items-center md:hidden m-5 border-t border-gray-300">
+                            <a href="#loo" class="bg-black rounded-full m-1"><img src="./css/footer/tiktok.png"
+                                    alt=""></a>
+                            <a href="#loo" class="bg-blue-500 rounded-full m-1"><img src="./css/footer/linkedin.png"
+                                    alt=""></a>
+                            <a href="#loo" class="bg-red-600 rounded-full m-1"><img src="./css/footer/youtube.png"
+                                    alt=""></a>
+                            <a href="#loo" class="bg-blue-600 rounded-full m-1"><img src="./css/footer/facebook.png"
+                                    alt="">
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6 text-white">
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+        </nav>
+    </header>
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e) {
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[7%]')
+        }
+    </script>
+    <section class="flex flex-col place-items-center"
+        style="background-image: url('./css/background.png'); width: 100%;">
+        <script src="main.js"></script>
+        <div
+            class="banner1 hidden md:flex-col-reverse md:flex lg:flex lg:flex-row lg:items-end items-center justify-between">
+            <div class="banner-content-left text-left">
+                <div class="flex text-base sm:text-base md:text-2xl lg:text-3xl  uppercase italic text-orange-500 my-3.5"
+                    style="padding-left: 9%;">
+                    THƯ VIỆN BẢN VẼ VÀ TÀI LIỆU CƠ ĐIỆN
+                </div>
+                <div class="flex text-base sm:text-lg md:text-4xl lg:text-5xl font-bold uppercase text-white mb-2"
+                    style="padding-left: 9%;">
+                    LỚN NHẤT ĐÔNG NAM Á
+                </div>
+                <div class="text-white" style="padding-left: 9%;">
+                    Tìm kiếm Tài liệu, Bản vẽ mà bạn đang quan tâm
+                </div>
+                <div class="hidden md:flex lg:flex bg-white" style="
+                padding: 3%;
+                margin-top: 3%;
+                margin-left: 9%;
+                margin-right: 33%;
+            ">
+                    <button id="dropdown-button" data-dropdown-toggle="dropdown"
+                        class="flex-shrink-0 z-1 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 hover:bg-gray-200 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white dark:border-gray-600"
+                        style="
+                        background: #d4d4d4;
+                        border: none;
+                        color: rgb(69, 69, 69);" type="button">Phân loại tài liệu<svg aria-hidden="true"
+                            class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg></button>
+                    <div id="dropdown"
+                        class="z-10 hidden bg-gray-200 divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-lime-700">
+                        <ul class="py-2 text-sm text-black dark:text-gray-200" aria-labelledby="dropdown-button">
+                            <li>
+                                <button type="button"
+                                    class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Nhà
+                                    đất</button>
+                            </li>
+                            <li>
+                                <button type="button"
+                                    class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Chung
+                                    cư</button>
+                            </li>
+                            <li>
+                                <button type="button"
+                                    class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Nhà
+                                    bè</button>
+                            </li>
+                            <li>
+                                <button type="button"
+                                    class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Nhà
+                                    trên cây</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="relative w-full">
+                        <input type="search" id="search-dropdown"
+                            class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 border-l-gray-50 border-l-2 border border-gray-300 focus:ring-gray-500 focus:border-gray-500 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-gray-500"
+                            style="
+                            background: #d4d4d4;
+                            border: none;
+                        " placeholder="Search Mockups, Logos, Design Templates..." required>
+                        <button type="submit"
+                            class="absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-gray-700 border border-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+                            style="
+                            background: #d4d4d4;
+                            border: none;
+                        ">
+                            <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                            <span class="sr-only">Search</span>
+                        </button>
+                    </div>
+                </div>
+                <script>
+                    const dropdownButton = document.getElementById('dropdown-button');
+                    const dropdown = document.getElementById('dropdown');
+
+                    dropdownButton.onclick = function () {
+                        dropdown.classList.toggle('hidden');
+                    };
+                </script>
+
+                <div class="hidden sm:hidden md:flex lg:flex flex-wrap text-white my-9 mr-44" style="margin-left: 9%;">
+                    <a href="#"
+                        class="inline-flex flex-row-reverse justify-between items-center p-2 bg-white bg-opacity-50 rounded-3xl">
+                        Bản vẽ cơ điện tòa chung cư <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+
+                    </a>
+                    <a href="#"
+                        class="inline-flex flex-row-reverse justify-between items-center p-2 bg-white bg-opacity-50 rounded-3xl">
+                        Tài liệu cơ điện nhà phố <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="w-5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+
+                    </a>
+                    <a href="#"
+                        class="inline-flex flex-row-reverse justify-between items-center p-2 bg-white bg-opacity-50 rounded-3xl">
+                        Bản vẽ cơ điện nhà xưởng <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="w-5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+
+                    </a>
+                    <a href="#"
+                        class="inline-flex flex-row-reverse justify-between items-center p-2 bg-white bg-opacity-50 rounded-3xl">
+                        Tài liệu cơ điện nội thất <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+
+                    </a>
+                    <a href="#"
+                        class="inline-flex flex-row-reverse justify-between items-center p-2 bg-white bg-opacity-50 rounded-3xl">
+                        Tài liệu cơ điện ngoại thất <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+
+                        <a href="#"
+                            class="inline-flex flex-row-reverse justify-between items-center p-2 bg-white bg-opacity-50 rounded-3xl">
+                            Bản vẽ cơ điện biệt thự <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                            </svg>
+
+                        </a>
+                </div>
+            </div>
+            <div class="hidden sm:hidden banner-content-right bg-cover lg:flex items-center justify-end">
+                <div><img src="./css/human.png" alt=""></div>
+            </div>
+        </div>
+        <div><img class="w-full md:hidden" src="./css/backgruondSM.png" alt=""></div>
+    </section>
+    <section class="flex flex-col place-items-center">
+        <div class="container w-11/12 xl:w-full">
+            <div class="menuBody bg-blue-600 pt-2.5 pb-7 mt-8 px-36 hidden xl:flex xl:flex-col">
+                <div class="menuBody-content text-white hidden sm:hidden md:inline-flex lg:inline-flex pb-4">
+                    Hiện tại hệ thống có trên&nbsp;<div class="font-bold">1000</div>&nbsp;bản vẽ, Tài liệu và Hình ảnh
+                    miễn phí, cùng
+                    tìm hiểu ngay!
+                </div>
+                <div class="menuBody-bar flex justify-evenly" style="
+                    margin: 0 -9% 0 -9%;">
+                    <div class="relative" data-te-dropdown-ref>
+                        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown1"
+                            class="whitespace-nowrap bg-primary bg-white text-blue-500 flex items-center p-3.5 text-xs font-medium uppercase leading-normal shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                            type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd"
+                                    d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            Công Cụ<svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg></button>
+                        <!-- Dropdown menu -->
+                        <div id="dropdown1"
+                            class="z-10 dropdown-menu hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-lime-700">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                aria-labelledby="dropdownDefaultButton">
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cờ
+                                        lê</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mỏ
+                                        lết</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tua
+                                        vít</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Máy
+                                        cắt thủy lực</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="relative" data-te-dropdown-ref>
+                        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown2"
+                            class="whitespace-nowrap bg-primary bg-blue-400 text-white flex items-center p-3.5 text-xs font-medium uppercase leading-normal shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                            type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                fill="currentColor" class="w-6 h-6">
+                                <path
+                                    d="M19.006 3.705a.75.75 0 00-.512-1.41L6 6.838V3a.75.75 0 00-.75-.75h-1.5A.75.75 0 003 3v4.93l-1.006.365a.75.75 0 00.512 1.41l16.5-6z" />
+                                <path fill-rule="evenodd"
+                                    d="M3.019 11.115L18 5.667V9.09l4.006 1.456a.75.75 0 11-.512 1.41l-.494-.18v8.475h.75a.75.75 0 010 1.5H2.25a.75.75 0 010-1.5H3v-9.129l.019-.006zM18 20.25v-9.565l1.5.545v9.02H18zm-9-6a.75.75 0 00-.75.75v4.5c0 .414.336.75.75.75h3a.75.75 0 00.75-.75V15a.75.75 0 00-.75-.75H9z"
+                                    clip-rule="evenodd" />
+                            </svg>
+
+                            Biệt Thự<svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg></button>
+                        <!-- Dropdown menu -->
+                        <div id="dropdown2"
+                            class="z-10 dropdown-menu hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-lime-700">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                aria-labelledby="dropdownDefaultButton">
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Thái
+                                        Công</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Châu
+                                        Bùi</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tử
+                                        Cấm Thành</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Lăng
+                                        Khải Định</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="relative" data-te-dropdown-ref>
+                        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown3"
+                            class="whitespace-nowrap bg-primary bg-blue-400 text-white flex items-center p-3.5 text-xs font-medium uppercase leading-normal shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                            type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                fill="currentColor" class="w-6 h-6">
+                                <path
+                                    d="M3.375 4.5C2.339 4.5 1.5 5.34 1.5 6.375V13.5h12V6.375c0-1.036-.84-1.875-1.875-1.875h-8.25zM13.5 15h-12v2.625c0 1.035.84 1.875 1.875 1.875h.375a3 3 0 116 0h3a.75.75 0 00.75-.75V15z" />
+                                <path
+                                    d="M8.25 19.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0zM15.75 6.75a.75.75 0 00-.75.75v11.25c0 .087.015.17.042.248a3 3 0 015.958.464c.853-.175 1.522-.935 1.464-1.883a18.659 18.659 0 00-3.732-10.104 1.837 1.837 0 00-1.47-.725H15.75z" />
+                                <path d="M19.5 19.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z" />
+                            </svg>
+
+                            Nhà Xưởng<svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg></button>
+                        <!-- Dropdown menu -->
+                        <div id="dropdown3"
+                            class="z-10 dropdown-menu hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-lime-700">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                aria-labelledby="dropdownDefaultButton">
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Xưởng
+                                        Rau Câu</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Xưởng
+                                        May</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Xưởng
+                                        Cơ Khí</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Xưởng
+                                        SamSung</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="relative" data-te-dropdown-ref>
+                        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown4"
+                            class="whitespace-nowrap bg-primary bg-blue-400 text-white flex items-center p-3.5 text-xs font-medium uppercase leading-normal shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                            type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd"
+                                    d="M3 2.25a.75.75 0 000 1.5v16.5h-.75a.75.75 0 000 1.5H15v-18a.75.75 0 000-1.5H3zM6.75 19.5v-2.25a.75.75 0 01.75-.75h3a.75.75 0 01.75.75v2.25a.75.75 0 01-.75.75h-3a.75.75 0 01-.75-.75zM6 6.75A.75.75 0 016.75 6h.75a.75.75 0 010 1.5h-.75A.75.75 0 016 6.75zM6.75 9a.75.75 0 000 1.5h.75a.75.75 0 000-1.5h-.75zM6 12.75a.75.75 0 01.75-.75h.75a.75.75 0 010 1.5h-.75a.75.75 0 01-.75-.75zM10.5 6a.75.75 0 000 1.5h.75a.75.75 0 000-1.5h-.75zm-.75 3.75A.75.75 0 0110.5 9h.75a.75.75 0 010 1.5h-.75a.75.75 0 01-.75-.75zM10.5 12a.75.75 0 000 1.5h.75a.75.75 0 000-1.5h-.75zM16.5 6.75v15h5.25a.75.75 0 000-1.5H21v-12a.75.75 0 000-1.5h-4.5zm1.5 4.5a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75h-.008a.75.75 0 01-.75-.75v-.008zm.75 2.25a.75.75 0 00-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75v-.008a.75.75 0 00-.75-.75h-.008zM18 17.25a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75h-.008a.75.75 0 01-.75-.75v-.008z"
+                                    clip-rule="evenodd" />
+                            </svg>
+
+                            Chung Cư<svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg></button>
+                        <!-- Dropdown menu -->
+                        <div id="dropdown4"
+                            class="z-10 dropdown-menu hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-lime-700">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                aria-labelledby="dropdownDefaultButton">
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sao
+                                        Vàng</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Vinhomes
+                                        Smart City</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Điểm
+                                        Hẹn</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sao
+                                        Mai</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="relative" data-te-dropdown-ref>
+                        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown5"
+                            class="whitespace-nowrap bg-primary bg-blue-400 text-white flex items-center p-3.5 text-xs font-medium uppercase leading-normal shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                            type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                fill="currentColor" class="w-6 h-6">
+                                <path
+                                    d="M11.584 2.376a.75.75 0 01.832 0l9 6a.75.75 0 11-.832 1.248L12 3.901 3.416 9.624a.75.75 0 01-.832-1.248l9-6z" />
+                                <path fill-rule="evenodd"
+                                    d="M20.25 10.332v9.918H21a.75.75 0 010 1.5H3a.75.75 0 010-1.5h.75v-9.918a.75.75 0 01.634-.74A49.109 49.109 0 0112 9c2.59 0 5.134.202 7.616.592a.75.75 0 01.634.74zm-7.5 2.418a.75.75 0 00-1.5 0v6.75a.75.75 0 001.5 0v-6.75zm3-.75a.75.75 0 01.75.75v6.75a.75.75 0 01-1.5 0v-6.75a.75.75 0 01.75-.75zM9 12.75a.75.75 0 00-1.5 0v6.75a.75.75 0 001.5 0v-6.75z"
+                                    clip-rule="evenodd" />
+                                <path d="M12 7.875a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" />
+                            </svg>
+
+                            Bệnh Viện<svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg></button>
+                        <!-- Dropdown menu -->
+                        <div id="dropdown5"
+                            class="z-10 dropdown-menu hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-lime-700">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                aria-labelledby="dropdownDefaultButton">
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Bạch
+                                        Mai</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Việt
+                                        Đức</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Quân
+                                        Y</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Trung
+                                        Ương</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="relative" data-te-dropdown-ref>
+                        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown6"
+                            class="whitespace-nowrap bg-primary bg-blue-400 text-white flex items-center p-3.5 text-xs font-medium uppercase leading-normal shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                            type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd"
+                                    d="M4.5 2.25a.75.75 0 000 1.5v16.5h-.75a.75.75 0 000 1.5h16.5a.75.75 0 000-1.5h-.75V3.75a.75.75 0 000-1.5h-15zM9 6a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H9zm-.75 3.75A.75.75 0 019 9h1.5a.75.75 0 010 1.5H9a.75.75 0 01-.75-.75zM9 12a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H9zm3.75-5.25A.75.75 0 0113.5 6H15a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zM13.5 9a.75.75 0 000 1.5H15A.75.75 0 0015 9h-1.5zm-.75 3.75a.75.75 0 01.75-.75H15a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zM9 19.5v-2.25a.75.75 0 01.75-.75h4.5a.75.75 0 01.75.75v2.25a.75.75 0 01-.75.75h-4.5A.75.75 0 019 19.5z"
+                                    clip-rule="evenodd" />
+                            </svg>
+
+                            Khách Sạn<svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg></button>
+                        <!-- Dropdown menu -->
+                        <div id="dropdown6"
+                            class="z-10 dropdown-menu hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-lime-700">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                aria-labelledby="dropdownDefaultButton">
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Ngàn
+                                        Sao</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Bờ
+                                        Lau</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Bụi
+                                        Chuối</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Công
+                                        Viên Hòa Bình</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="relative" data-te-dropdown-ref>
+                        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown7"
+                            class="whitespace-nowrap bg-primary bg-blue-400 text-white flex items-center p-3.5 text-xs font-medium uppercase leading-normal shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                            type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd"
+                                    d="M17.663 3.118c.225.015.45.032.673.05C19.876 3.298 21 4.604 21 6.109v9.642a3 3 0 01-3 3V16.5c0-5.922-4.576-10.775-10.384-11.217.324-1.132 1.3-2.01 2.548-2.114.224-.019.448-.036.673-.051A3 3 0 0113.5 1.5H15a3 3 0 012.663 1.618zM12 4.5A1.5 1.5 0 0113.5 3H15a1.5 1.5 0 011.5 1.5H12z"
+                                    clip-rule="evenodd" />
+                                <path
+                                    d="M3 8.625c0-1.036.84-1.875 1.875-1.875h.375A3.75 3.75 0 019 10.5v1.875c0 1.036.84 1.875 1.875 1.875h1.875A3.75 3.75 0 0116.5 18v2.625c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 013 20.625v-12z" />
+                                <path
+                                    d="M10.5 10.5a5.23 5.23 0 00-1.279-3.434 9.768 9.768 0 016.963 6.963 5.23 5.23 0 00-3.434-1.279h-1.875a.375.375 0 01-.375-.375V10.5z" />
+                            </svg>
+
+                            Bản Vẽ Khác...<svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg></button>
+                        <!-- Dropdown menu -->
+                        <div id="dropdown7"
+                            class="z-10 dropdown-menu hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-lime-700">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                aria-labelledby="dropdownDefaultButton">
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Rất
+                                        Khác</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Hơi
+                                        Khác</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Xíu
+                                        Khác</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Chắc
+                                        Khác</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="relative" data-te-dropdown-ref>
+                        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown8"
+                            class="whitespace-nowrap bg-primary bg-orange-400 text-white flex items-center p-3.5 text-xs font-medium uppercase leading-normal shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                            type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd"
+                                    d="M5.625 1.5H9a3.75 3.75 0 013.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 013.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 01-1.875-1.875V3.375c0-1.036.84-1.875 1.875-1.875zm6.905 9.97a.75.75 0 00-1.06 0l-3 3a.75.75 0 101.06 1.06l1.72-1.72V18a.75.75 0 001.5 0v-4.19l1.72 1.72a.75.75 0 101.06-1.06l-3-3z"
+                                    clip-rule="evenodd" />
+                                <path
+                                    d="M14.25 5.25a5.23 5.23 0 00-1.279-3.434 9.768 9.768 0 016.963 6.963A5.23 5.23 0 0016.5 7.5h-1.875a.375.375 0 01-.375-.375V5.25z" />
+                            </svg>Đăng Bản Vẽ<svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg></button>
+                        <!-- Dropdown menu -->
+                        <div id="dropdown8"
+                            class="z-20 dropdown-menu hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-lime-700">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                aria-labelledby="dropdownDefaultButton">
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Thư
+                                        Mục</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tải
+                                        Lên</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Liên
+                                        Kết</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tự
+                                        Nghĩ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <script src="main.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"></script>
+            </div>
+            <div class="hidden md:flex md:flex-col">
+                <div class="font-bold text-4xl inline-flex my-5">Danh Mục&nbsp;<div class="text-blue-600">Bản Vẽ</div>
+                </div>
+                <div class="flex justify-between">
+                    <div class="mb-3">Phân loại danh mục bản vẽ, Click vào mỗi danh mục để tìm hiểu thêm!</div>
+                    <div class="relative">
+                        <svg class="swiper-button-next" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                        </svg>
+                        <svg class="swiper-button-prev" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:grid lg:grid carouseler" style="
+                height: 500px;
+                width: 100%;
+            ">
+                <!-- Swiper -->
+                <style>
+                    .sample-slider {
+                        width: 40vw;
+                        height: 22vw;
+                    }
+
+                    .sample-slider img {
+                        width: 100%;
+                    }
+
+                    .sample-slider .swiper-slide {
+                        /*added*/
+                        height: calc((100% - 10px) / 2);
+                        /*added*/
+                    }
+                </style>
+
+                <div class="container swiper sample-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img style="object-fit: fill;" src="./css/house1.png"></div>
+                        <div class="swiper-slide"><img style="object-fit: fill;" src="./css/house2.png"></div>
+                        <div class="swiper-slide"><img style="object-fit: fill;" src="./css/house3.png"></div>
+                        <div class="swiper-slide"><img style="object-fit: fill;" src="./css/house4.png"></div>
+                        <div class="swiper-slide"><img style="object-fit: fill;" src="./css/house5.png"></div>
+                        <div class="swiper-slide"><img style="object-fit: fill;" src="./css/house6.png"></div>
+                        <div class="swiper-slide"><img style="object-fit: fill;" src="./css/house1.png"></div>
+                        <div class="swiper-slide"><img style="object-fit: fill;" src="./css/house2.png"></div>
+                        <div class="swiper-slide"><img style="object-fit: fill;" src="./css/house3.png"></div>
+                        <div class="swiper-slide"><img style="object-fit: fill;" src="./css/house4.png"></div>
+                        <div class="swiper-slide"><img style="object-fit: fill;" src="./css/house5.png"></div>
+                        <div class="swiper-slide"><img style="object-fit: fill;" src="./css/house6.png"></div>
+                        <div class="swiper-slide"><img style="object-fit: fill;" src="./css/house1.png"></div>
+                        <div class="swiper-slide"><img style="object-fit: fill;" src="./css/house2.png"></div>
+                        <div class="swiper-slide"><img style="object-fit: fill;" src="./css/house3.png"></div>
+                        <div class="swiper-slide"><img style="object-fit: fill;" src="./css/house4.png"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <script>
+                    const swipe = new Swiper('.sample-slider', {
+                        slidesPerView: 3,        //added
+                        spaceBetween: 10,        //added
+                        loop: true,
+                        grid: {            //added
+                            rows: 2,         //added
+                        },
+                        pagination: {
+                            el: '.swiper-pagination',
+                        },
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+
+                        breakpoints: {
+                            320: {
+                                slidesPerView: 1,
+                                spaceBetween: 10, grid: {            //added
+                                    rows: 2,         //added
+                                },
+                            },
+                            640: {
+                                slidesPerView: 2,
+                                spaceBetween: 10,
+                                grid: {            //added
+                                    rows: 2,         //added
+                                },
+                            },
+                            768: {
+                                slidesPerView: 2,
+                                spaceBetween: 10,
+                                grid: {            //added
+                                    rows: 2,         //added
+                                },
+                            },
+                            1024: {
+                                slidesPerView: 3,
+                                spaceBetween: 10, grid: {            //added
+                                    rows: 2,         //added
+                                },
+                            },
+                        }
+                    })
+                </script>
+            </div>
+            <div class="container items-center category py-8">
+                <div class="text-lg flex md:text-2xl lg:text-4xl md:pl-0 font-bold py-3">Bản Vẽ Nổi Bật
+                    Tại&nbsp;<div class="text-blue-600 pr-4">
+                        Shopcodien.Com
+                    </div>
+                </div>
+                <div class=" flex sm:flex md:flex lg:flex justify-between py-4">
+                    <div class="hidden lg:flex">Hàng trăm bản vẽ đẹp được đăng tải mỗi ngày, Hãy XEM và
+                        TẢI ngay!</div>
+                    <div class="max-w-full overflow-x-auto" id="cha">
+                        <ul
+                            class="filter-pro flex lg:flex-wrap flex-nowrap overflow-x-auto lg:overflow-x-hidden whitespace-nowrap lg:whitespace-normal wow fadeInRight font-medium text-center text-gray-500 dark:text-gray-400">
+                            <li class="mr-2 last:mr-0 mb-2">
+                                <a href="#cha" aria-current="page"
+                                    class="px-3 text-blue-600 bg-gray-100 active dark:text-blue-500">Gợi
+                                    ý</a>
+                            </li>
+                            <li class="mr-2 last:mr-0 mb-2">
+                                <a href="#cha"
+                                    class="px-3 hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Miễn
+                                    phí</a>
+                            </li>
+                            <li class="mr-2 last:mr-0 mb-2">
+                                <a href="#cha"
+                                    class="px-3 hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Mới
+                                    nhất</a>
+                            </li>
+                            <li class="mr-2 last:mr-0 mb-2">
+                                <a href="#cha"
+                                    class="px-3 hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Được
+                                    yêu thích</a>
+                            </li>
+                            <li class="mr-2 last:mr-0 mb-2">
+                                <a href="#cha"
+                                    class="px-3 hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Được
+                                    mua nhiều</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="category-content flex">
+                    <div class="category-left hidden xl:flex xl:flex-col xl:items-end xl:justify-between bg-cover bg-center"
+                        style="background-image: url('./css/category/background-girls.png'); width: 100%;">
+                        <div class="flex flex-col items-center mx-16">
+                            <div class="text-white text-[64px] font-extrabold capitalize">300+</div>
+                            <div class="text-center text-white text-[20px] font-semibold">Tài liệu cơ điện được đăng tải
+                                mỗi
+                                ngày</div>
+                            <div class="text-white text-[15px] font-semibold w-[166px] h-[46px] px-[30px] py-[11px] bg-orange-500 shadow justify-center items-center gap-2 inline-flex text-center"
+                                style="cursor: pointer;">
+                                Tìm Hiểu Ngay
+                            </div>
+                        </div>
+                        <img src="./css/category/asian-girls.png" class="w-full h-fit" alt="girls">
+                    </div>
+                    <div class="category-right flex flex-wrap gap-2 ml-0 lg:ml-2.5" style="
+                    width: 157%;
+                    
+                ">
+                        <div
+                            class="category-card-right flex-auto w-32 md:w-56 lg:w-48 xl:w-60 mx-auto transition duration-300 ease-in-out transform hover:scale-110">
+                            <div class="bg-white shadow-md">
+                                <a href="#">
+                                    <img class="w-full" src="./css/category/villa1.png" alt="">
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="text-blue-500 text-xs md:text-sm lg:text-sm xl:text-base tracking-tight mb-2">
+                                            BẢN VẼ CƠ ĐIỆN</h5>
+                                    </a>
+                                    <p class="font-medium text-xs sm:text-sm md:text-base lg:text-lg mb-3">Biệt thự 2
+                                        tầng
+                                        kết hợp
+                                        kinh doanh quán game kích thước
+                                        13x14m</p>
+                                    <div class="flex sm:flex md:flex lg:flex justify-between">
+                                        <a href="#" class="font-bold text-xs sm:text-sm md:text-lg lg:text-xl">
+                                            530.000đ
+                                        </a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="w-5">
+                                            <path fill-rule="evenodd"
+                                                d="M12 2.25a.75.75 0 01.75.75v11.69l3.22-3.22a.75.75 0 111.06 1.06l-4.5 4.5a.75.75 0 01-1.06 0l-4.5-4.5a.75.75 0 111.06-1.06l3.22 3.22V3a.75.75 0 01.75-.75zm-9 13.5a.75.75 0 01.75.75v2.25a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V16.5a.75.75 0 011.5 0v2.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V16.5a.75.75 0 01.75-.75z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="category-card-right flex-auto w-32 md:w-56 lg:w-48 xl:w-60 mx-auto transition duration-300 ease-in-out transform hover:scale-110">
+                            <div class="bg-white shadow-md">
+                                <a href="#">
+                                    <img class="w-full" src="./css/category/villa2.png" alt="">
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="text-blue-500 text-xs md:text-sm lg:text-sm xl:text-base tracking-tight mb-2">
+                                            BẢN VẼ CƠ ĐIỆN</h5>
+                                    </a>
+                                    <p class="font-medium text-xs sm:text-sm md:text-base lg:text-lg mb-3">Biệt thự 2
+                                        tầng
+                                        kết hợp
+                                        kinh doanh quán game kích thước
+                                        13x14m</p>
+                                    <div class="flex sm:flex md:flex lg:flex justify-between">
+                                        <a href="#" class="font-bold text-xs sm:text-sm md:text-lg lg:text-xl">
+                                            530.000đ
+                                        </a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="w-5">
+                                            <path fill-rule="evenodd"
+                                                d="M12 2.25a.75.75 0 01.75.75v11.69l3.22-3.22a.75.75 0 111.06 1.06l-4.5 4.5a.75.75 0 01-1.06 0l-4.5-4.5a.75.75 0 111.06-1.06l3.22 3.22V3a.75.75 0 01.75-.75zm-9 13.5a.75.75 0 01.75.75v2.25a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V16.5a.75.75 0 011.5 0v2.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V16.5a.75.75 0 01.75-.75z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="category-card-right flex-auto w-32 md:w-56 lg:w-48 xl:w-60 mx-auto transition duration-300 ease-in-out transform hover:scale-110">
+                            <div class="bg-white shadow-md">
+                                <a href="#">
+                                    <img class="w-full" src="./css/category/villa3.png" alt="">
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="text-blue-500 text-xs md:text-sm lg:text-sm xl:text-base tracking-tight mb-2">
+                                            BẢN VẼ CƠ ĐIỆN</h5>
+                                    </a>
+                                    <p class="font-medium text-xs sm:text-sm md:text-base lg:text-lg mb-3">Biệt thự 2
+                                        tầng
+                                        kết hợp
+                                        kinh doanh quán game kích thước
+                                        13x14m</p>
+                                    <div class="flex sm:flex md:flex lg:flex justify-between">
+                                        <a href="#" class="font-bold text-xs sm:text-sm md:text-lg lg:text-xl">
+                                            530.000đ
+                                        </a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="w-5">
+                                            <path fill-rule="evenodd"
+                                                d="M12 2.25a.75.75 0 01.75.75v11.69l3.22-3.22a.75.75 0 111.06 1.06l-4.5 4.5a.75.75 0 01-1.06 0l-4.5-4.5a.75.75 0 111.06-1.06l3.22 3.22V3a.75.75 0 01.75-.75zm-9 13.5a.75.75 0 01.75.75v2.25a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V16.5a.75.75 0 011.5 0v2.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V16.5a.75.75 0 01.75-.75z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="category-card-right flex-auto w-32 md:w-56 lg:w-48 xl:w-60 mx-auto transition duration-300 ease-in-out transform hover:scale-110">
+                            <div class="bg-white shadow-md">
+                                <a href="#">
+                                    <img class="w-full" src="./css/category/villa4.png" alt="">
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="text-blue-500 text-xs md:text-sm lg:text-sm xl:text-base tracking-tight mb-2">
+                                            BẢN VẼ CƠ ĐIỆN</h5>
+                                    </a>
+                                    <p class="font-medium text-xs sm:text-sm md:text-base lg:text-lg mb-3">Biệt thự 2
+                                        tầng
+                                        kết hợp
+                                        kinh doanh quán game kích thước
+                                        13x14m</p>
+                                    <div class="flex sm:flex md:flex lg:flex justify-between">
+                                        <a href="#" class="font-bold text-xs sm:text-sm md:text-lg lg:text-xl">
+                                            530.000đ
+                                        </a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="w-5">
+                                            <path fill-rule="evenodd"
+                                                d="M12 2.25a.75.75 0 01.75.75v11.69l3.22-3.22a.75.75 0 111.06 1.06l-4.5 4.5a.75.75 0 01-1.06 0l-4.5-4.5a.75.75 0 111.06-1.06l3.22 3.22V3a.75.75 0 01.75-.75zm-9 13.5a.75.75 0 01.75.75v2.25a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V16.5a.75.75 0 011.5 0v2.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V16.5a.75.75 0 01.75-.75z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="category-card-right flex-auto w-32 md:w-56 lg:w-48 xl:w-60 mx-auto transition duration-300 ease-in-out transform hover:scale-110">
+                            <div class="bg-white shadow-md">
+                                <a href="#">
+                                    <img class="w-full" src="./css/category/villa5.png" alt="">
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="text-blue-500 text-xs md:text-sm lg:text-sm xl:text-base tracking-tight mb-2">
+                                            BẢN VẼ CƠ ĐIỆN</h5>
+                                    </a>
+                                    <p class="font-medium text-xs sm:text-sm md:text-base lg:text-lg mb-3">Biệt thự 2
+                                        tầng
+                                        kết hợp
+                                        kinh doanh quán game kích thước
+                                        13x14m</p>
+                                    <div class="flex sm:flex md:flex lg:flex justify-between">
+                                        <a href="#" class="font-bold text-xs sm:text-sm md:text-lg lg:text-xl">
+                                            530.000đ
+                                        </a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="w-5">
+                                            <path fill-rule="evenodd"
+                                                d="M12 2.25a.75.75 0 01.75.75v11.69l3.22-3.22a.75.75 0 111.06 1.06l-4.5 4.5a.75.75 0 01-1.06 0l-4.5-4.5a.75.75 0 111.06-1.06l3.22 3.22V3a.75.75 0 01.75-.75zm-9 13.5a.75.75 0 01.75.75v2.25a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V16.5a.75.75 0 011.5 0v2.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V16.5a.75.75 0 01.75-.75z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="category-card-right flex-auto w-32 md:w-56 lg:w-48 xl:w-60 mx-auto transition duration-300 ease-in-out transform hover:scale-110">
+                            <div class="bg-white shadow-md">
+                                <a href="#">
+                                    <img class="w-full" src="./css/category/villa6.png" alt="">
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="text-blue-500 text-xs md:text-sm lg:text-sm xl:text-base tracking-tight mb-2">
+                                            BẢN VẼ CƠ ĐIỆN</h5>
+                                    </a>
+                                    <p class="font-medium text-xs sm:text-sm md:text-base lg:text-lg mb-3">Biệt thự 2
+                                        tầng
+                                        kết hợp
+                                        kinh doanh quán game kích thước
+                                        13x14m</p>
+                                    <div class="flex sm:flex md:flex lg:flex justify-between">
+                                        <a href="#" class="font-bold text-xs sm:text-sm md:text-lg lg:text-xl">
+                                            530.000đ
+                                        </a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="w-5">
+                                            <path fill-rule="evenodd"
+                                                d="M12 2.25a.75.75 0 01.75.75v11.69l3.22-3.22a.75.75 0 111.06 1.06l-4.5 4.5a.75.75 0 01-1.06 0l-4.5-4.5a.75.75 0 111.06-1.06l3.22 3.22V3a.75.75 0 01.75-.75zm-9 13.5a.75.75 0 01.75.75v2.25a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V16.5a.75.75 0 011.5 0v2.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V16.5a.75.75 0 01.75-.75z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center text-white mt-5" id="aa"><a
+                        class="flex justify-between bg-orange-500 p-3" href="#aa">Xem
+                        tất cả bản
+                        vẽ&nbsp;<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                        </svg>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hidden md:flex md:justify-between bg-blue-300 lg:flex lg:justify-between font-semibold p-9 w-full">
+            <div class="flex">
+                <img src="./css/icons/icon1.png" alt="">
+                <div style="
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                padding: 3%;">Thư viện online với tài nguyên chất lượng cao</div>
+            </div>
+            <div class="flex">
+                <img src="./css/icons/icon2.png" alt="">
+                <div style="
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                padding: 3%;">Chia sẻ tài nguyên cơ điện không giới hạn</div>
+            </div>
+            <div class="flex">
+                <img src="./css/icons/icon3.png" alt="">
+                <div style="
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                padding: 3%;">Chia sẻ tài liệu, kiến thức để kiếm thêm thu nhập</div>
+            </div>
+        </div>
+    </section>
+    <section class="flex flex-col place-items-center">
+        <div class="container w-11/12 xl:w-full">
+            <div class="flex flex-col">
+                <div class="text-lg flex md:text-2xl lg:text-4xl font-bold py-3">Danh Mục&nbsp;<div
+                        class="text-blue-600">Tài liệu</div>
+                </div>
+                <div class="py-4">Phân loại danh mục tài liệu, Click vào mỗi danh mục để tìm hiểu thêm!</div>
+            </div>
+            <div class="flex flex-wrap sm:-mx-2 -mx-1 justify-center">
+                <div class="w-1/2 md:w-1/3 lg:w-1/5 sm:px-2 px-1 sm:mb-4 mb-2 wow fadeInUp"><img
+                        src="./css/icons/iconTaiLieu1.png" alt=""
+                        class="item-doc__cate transition-all duration-300 border-[2px] border-solid border-transparent hover:border-[#FF7A01] block h-full bg-[#F7F8F9] hover:bg-[#EFF7FF] 2xl:py-16 2xl:px-10 lg:py-10 lg:px-6 p-4 text-center">
+                </div>
+                <div class="w-1/2 md:w-1/3 lg:w-1/5 sm:px-2 px-1 sm:mb-4 mb-2 wow fadeInUp"><img
+                        src="./css/icons/iconTaiLieu2.png" alt=""
+                        class="item-doc__cate transition-all duration-300 border-[2px] border-solid border-transparent hover:border-[#FF7A01] block h-full bg-[#F7F8F9] hover:bg-[#EFF7FF] 2xl:py-16 2xl:px-10 lg:py-10 lg:px-6 p-4 text-center">
+                </div>
+                <div class="w-1/2 md:w-1/3 lg:w-1/5 sm:px-2 px-1 sm:mb-4 mb-2 wow fadeInUp"><img
+                        src="./css/icons/iconTaiLieu3.png" alt=""
+                        class="item-doc__cate transition-all duration-300 border-[2px] border-solid border-transparent hover:border-[#FF7A01] block h-full bg-[#F7F8F9] hover:bg-[#EFF7FF] 2xl:py-16 2xl:px-10 lg:py-10 lg:px-6 p-4 text-center">
+                </div>
+                <div class="w-1/2 md:w-1/3 lg:w-1/5 sm:px-2 px-1 sm:mb-4 mb-2 wow fadeInUp"><img
+                        src="./css/icons/iconTaiLieu4.png" alt=""
+                        class="item-doc__cate transition-all duration-300 border-[2px] border-solid border-transparent hover:border-[#FF7A01] block h-full bg-[#F7F8F9] hover:bg-[#EFF7FF] 2xl:py-16 2xl:px-10 lg:py-10 lg:px-6 p-4 text-center">
+                </div>
+                <div class="w-1/2 md:w-1/3 lg:w-1/5 sm:px-2 px-1 sm:mb-4 mb-2 wow fadeInUp"><img
+                        src="./css/icons/iconTaiLieu5.png" alt=""
+                        class="item-doc__cate transition-all duration-300 border-[2px] border-solid border-transparent hover:border-[#FF7A01] block h-full bg-[#F7F8F9] hover:bg-[#EFF7FF] 2xl:py-16 2xl:px-10 lg:py-10 lg:px-6 p-4 text-center">
+                </div>
+            </div>
+            <div class="category2 pt-8">
+                <div class="text-lg flex md:text-2xl lg:text-4xl font-bold py-3">Tài liệu
+                    Nổi Bật Tại<div class="text-blue-600 pr-4">&nbsp;Shopcodien.Com
+                    </div>
+                </div>
+                <div class=" flex sm:flex md:flex lg:flex justify-between py-4">
+                    <div class="hidden lg:flex">Hàng trăm bản vẽ đẹp được đăng tải mỗi ngày, Hãy XEM và
+                        TẢI ngay!</div>
+                    <div class="max-w-full overflow-x-auto" id="bo">
+                        <ul
+                            class="filter-pro flex lg:flex-wrap flex-nowrap overflow-x-auto lg:overflow-x-hidden whitespace-nowrap lg:whitespace-normal wow fadeInRight font-medium text-center text-gray-500 dark:text-gray-400">
+                            <li class="mr-2 last:mr-0 mb-2">
+                                <a href="#bo" aria-current="page"
+                                    class="px-3 text-blue-600 bg-gray-100 active dark:text-blue-500">Gợi
+                                    ý</a>
+                            </li>
+                            <li class="mr-2 last:mr-0 mb-2">
+                                <a href="#bo"
+                                    class="px-3 hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Miễn
+                                    phí</a>
+                            </li>
+                            <li class="mr-2 last:mr-0 mb-2">
+                                <a href="#bo"
+                                    class="px-3 hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Mới
+                                    nhất</a>
+                            </li>
+                            <li class="mr-2 last:mr-0 mb-2">
+                                <a href="#bo"
+                                    class="px-3 hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Được
+                                    yêu thích</a>
+                            </li>
+                            <li class="mr-2 last:mr-0 mb-2">
+                                <a href="#bo"
+                                    class="px-3 hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Được
+                                    mua nhiều</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="category-content flex">
+                    <div class="category-right flex flex-wrap gap-2 mr-0 lg:mr-2.5" style="
+                    width: 157%;
+                    
+                ">
+
+                        <div
+                            class="category-card-right flex-auto w-32 md:w-56 lg:w-48 xl:w-60 mx-auto transition duration-300 ease-in-out transform hover:scale-110">
+                            <div class="bg-white shadow-md">
+                                <a href="#">
+                                    <img class="w-full" src="./css/category/villa1.png" alt="">
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="text-blue-500 text-xs md:text-sm lg:text-sm xl:text-base tracking-tight mb-2">
+                                            BẢN VẼ CƠ ĐIỆN</h5>
+                                    </a>
+                                    <p class="font-medium text-xs sm:text-sm md:text-base lg:text-lg mb-3">Biệt thự 2
+                                        tầng
+                                        kết hợp
+                                        kinh doanh quán game kích thước
+                                        13x14m</p>
+                                    <div class="flex sm:flex md:flex lg:flex justify-between">
+                                        <a href="#" class="font-bold text-xs sm:text-sm md:text-lg lg:text-xl">
+                                            530.000đ
+                                        </a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="w-5">
+                                            <path fill-rule="evenodd"
+                                                d="M12 2.25a.75.75 0 01.75.75v11.69l3.22-3.22a.75.75 0 111.06 1.06l-4.5 4.5a.75.75 0 01-1.06 0l-4.5-4.5a.75.75 0 111.06-1.06l3.22 3.22V3a.75.75 0 01.75-.75zm-9 13.5a.75.75 0 01.75.75v2.25a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V16.5a.75.75 0 011.5 0v2.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V16.5a.75.75 0 01.75-.75z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="category-card-right flex-auto w-32 md:w-56 lg:w-48 xl:w-60 mx-auto transition duration-300 ease-in-out transform hover:scale-110">
+                            <div class="bg-white shadow-md">
+                                <a href="#">
+                                    <img class="w-full" src="./css/category/villa2.png" alt="">
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="text-blue-500 text-xs md:text-sm lg:text-sm xl:text-base tracking-tight mb-2">
+                                            BẢN VẼ CƠ ĐIỆN</h5>
+                                    </a>
+                                    <p class="font-medium text-xs sm:text-sm md:text-base lg:text-lg mb-3">Biệt thự 2
+                                        tầng
+                                        kết hợp
+                                        kinh doanh quán game kích thước
+                                        13x14m</p>
+                                    <div class="flex sm:flex md:flex lg:flex justify-between">
+                                        <a href="#" class="font-bold text-xs sm:text-sm md:text-lg lg:text-xl">
+                                            530.000đ
+                                        </a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="w-5">
+                                            <path fill-rule="evenodd"
+                                                d="M12 2.25a.75.75 0 01.75.75v11.69l3.22-3.22a.75.75 0 111.06 1.06l-4.5 4.5a.75.75 0 01-1.06 0l-4.5-4.5a.75.75 0 111.06-1.06l3.22 3.22V3a.75.75 0 01.75-.75zm-9 13.5a.75.75 0 01.75.75v2.25a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V16.5a.75.75 0 011.5 0v2.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V16.5a.75.75 0 01.75-.75z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="category-card-right flex-auto w-32 md:w-56 lg:w-48 xl:w-60 mx-auto transition duration-300 ease-in-out transform hover:scale-110">
+                            <div class="bg-white shadow-md">
+                                <a href="#">
+                                    <img class="w-full" src="./css/category/villa3.png" alt="">
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="text-blue-500 text-xs md:text-sm lg:text-sm xl:text-base tracking-tight mb-2">
+                                            BẢN VẼ CƠ ĐIỆN</h5>
+                                    </a>
+                                    <p class="font-medium text-xs sm:text-sm md:text-base lg:text-lg mb-3">Biệt thự 2
+                                        tầng
+                                        kết hợp
+                                        kinh doanh quán game kích thước
+                                        13x14m</p>
+                                    <div class="flex sm:flex md:flex lg:flex justify-between">
+                                        <a href="#" class="font-bold text-xs sm:text-sm md:text-lg lg:text-xl">
+                                            530.000đ
+                                        </a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="w-5">
+                                            <path fill-rule="evenodd"
+                                                d="M12 2.25a.75.75 0 01.75.75v11.69l3.22-3.22a.75.75 0 111.06 1.06l-4.5 4.5a.75.75 0 01-1.06 0l-4.5-4.5a.75.75 0 111.06-1.06l3.22 3.22V3a.75.75 0 01.75-.75zm-9 13.5a.75.75 0 01.75.75v2.25a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V16.5a.75.75 0 011.5 0v2.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V16.5a.75.75 0 01.75-.75z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="category-card-right flex-auto w-32 md:w-56 lg:w-48 xl:w-60 mx-auto transition duration-300 ease-in-out transform hover:scale-110">
+                            <div class="bg-white shadow-md">
+                                <a href="#">
+                                    <img class="w-full" src="./css/category/villa4.png" alt="">
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="text-blue-500 text-xs md:text-sm lg:text-sm xl:text-base tracking-tight mb-2">
+                                            BẢN VẼ CƠ ĐIỆN</h5>
+                                    </a>
+                                    <p class="font-medium text-xs sm:text-sm md:text-base lg:text-lg mb-3">Biệt thự 2
+                                        tầng
+                                        kết hợp
+                                        kinh doanh quán game kích thước
+                                        13x14m</p>
+                                    <div class="flex sm:flex md:flex lg:flex justify-between">
+                                        <a href="#" class="font-bold text-xs sm:text-sm md:text-lg lg:text-xl">
+                                            530.000đ
+                                        </a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="w-5">
+                                            <path fill-rule="evenodd"
+                                                d="M12 2.25a.75.75 0 01.75.75v11.69l3.22-3.22a.75.75 0 111.06 1.06l-4.5 4.5a.75.75 0 01-1.06 0l-4.5-4.5a.75.75 0 111.06-1.06l3.22 3.22V3a.75.75 0 01.75-.75zm-9 13.5a.75.75 0 01.75.75v2.25a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V16.5a.75.75 0 011.5 0v2.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V16.5a.75.75 0 01.75-.75z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="category-card-right flex-auto w-32 md:w-56 lg:w-48 xl:w-60 mx-auto transition duration-300 ease-in-out transform hover:scale-110">
+                            <div class="bg-white shadow-md">
+                                <a href="#">
+                                    <img class="w-full" src="./css/category/villa5.png" alt="">
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="text-blue-500 text-xs md:text-sm lg:text-sm xl:text-base tracking-tight mb-2">
+                                            BẢN VẼ CƠ ĐIỆN</h5>
+                                    </a>
+                                    <p class="font-medium text-xs sm:text-sm md:text-base lg:text-lg mb-3">Biệt thự 2
+                                        tầng
+                                        kết hợp
+                                        kinh doanh quán game kích thước
+                                        13x14m</p>
+                                    <div class="flex sm:flex md:flex lg:flex justify-between">
+                                        <a href="#" class="font-bold text-xs sm:text-sm md:text-lg lg:text-xl">
+                                            530.000đ
+                                        </a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="w-5">
+                                            <path fill-rule="evenodd"
+                                                d="M12 2.25a.75.75 0 01.75.75v11.69l3.22-3.22a.75.75 0 111.06 1.06l-4.5 4.5a.75.75 0 01-1.06 0l-4.5-4.5a.75.75 0 111.06-1.06l3.22 3.22V3a.75.75 0 01.75-.75zm-9 13.5a.75.75 0 01.75.75v2.25a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V16.5a.75.75 0 011.5 0v2.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V16.5a.75.75 0 01.75-.75z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="category-card-right flex-auto w-32 md:w-56 lg:w-48 xl:w-60 mx-auto transition duration-300 ease-in-out transform hover:scale-110">
+                            <div class="bg-white shadow-md">
+                                <a href="#">
+                                    <img class="w-full" src="./css/category/villa6.png" alt="">
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="text-blue-500 text-xs md:text-sm lg:text-sm xl:text-base tracking-tight mb-2">
+                                            BẢN VẼ CƠ ĐIỆN</h5>
+                                    </a>
+                                    <p class="font-medium text-xs sm:text-sm md:text-base lg:text-lg mb-3">Biệt thự 2
+                                        tầng
+                                        kết hợp
+                                        kinh doanh quán game kích thước
+                                        13x14m</p>
+                                    <div class="flex sm:flex md:flex lg:flex justify-between">
+                                        <a href="#" class="font-bold text-xs sm:text-sm md:text-lg lg:text-xl">
+                                            530.000đ
+                                        </a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="w-5">
+                                            <path fill-rule="evenodd"
+                                                d="M12 2.25a.75.75 0 01.75.75v11.69l3.22-3.22a.75.75 0 111.06 1.06l-4.5 4.5a.75.75 0 01-1.06 0l-4.5-4.5a.75.75 0 111.06-1.06l3.22 3.22V3a.75.75 0 01.75-.75zm-9 13.5a.75.75 0 01.75.75v2.25a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V16.5a.75.75 0 011.5 0v2.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V16.5a.75.75 0 01.75-.75z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-left hidden xl:flex xl:flex-col xl:items-end xl:justify-between bg-cover bg-center"
+                        style="background-image: url('./css/category/background-girls.png'); width: 100%;">
+                        <div class="flex flex-col items-center mx-16">
+                            <div class="text-white text-[64px] font-extrabold capitalize">300+</div>
+                            <div class="text-center text-white text-[20px] font-semibold">Tài liệu cơ điện được đăng tải
+                                mỗi
+                                ngày</div>
+                            <div class="text-white text-[15px] font-semibold w-[166px] h-[46px] px-[30px] py-[11px] bg-orange-500 shadow justify-center items-center gap-2 inline-flex text-center"
+                                style="cursor: pointer;">
+                                Tìm Hiểu Ngay
+                            </div>
+                        </div>
+                        <img src="./css/category/asian-boys.png" class="w-full h-fit" alt="girls">
+                    </div>
+                </div>
+                <div class="flex justify-center items-center text-xs md:text-base text-white my-6" id="sp"><a
+                        class="flex justify-between bg-orange-500 p-3" href="#sp">Xem
+                        tất cả bản
+                        vẽ&nbsp;<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                        </svg>
+
+                    </a>
+                </div>
+            </div>
+            <div class="about-us flex lg:justify-between" style="margin-bottom: 10%;">
+                <div class="about-us-left hidden lg:flex lg:w-72 xl:flex xl:w-80 2xl:flex 2xl:w-1/3" id="ad">
+                    <img src="./css/aboutUs/cityPic.png" alt="" style="
+                    margin-right: 3%;
+                ">
+                    <img src="./css/aboutUs/chungtoi.png" alt="">
+                </div>
+                <div class="about-us-right w-full lg:m-0 lg:w-2/5 xl:w-6/12"
+                    style="background-image: url('./css/aboutUs/backgroundAb.png');">
+                    <div
+                        class="text-lg flex md:text-2xl font-bold py-3 md:flex md:flex-row lg:text-3xl lg:flex lg:flex-row">
+                        <div class="text-blue-600">Giới Thiệu</div>&nbsp;Về Chúng Tôi
+                    </div>
+                    <div class="font-bold">Chúng tôi luôn nỗ lực tạo ra một cộng đồng quy tụ đội ngũ kỹ sư giỏi và
+                        tâm
+                        huyết</div>
+                    <div class="text-gray-500 py-5 text-justify">Lorem ipsum dolor sit amet consectetur. Tempor aliquet
+                        id vitae
+                        lectus
+                        vulputate ut ut
+                        suspendisse ornare. Vel scelerisque sem hendrerit arcu. Ut dictum sollicitudin non est
+                        consectetur massa augue. Potenti sollicitudin id tellus nunc ipsum magna. Lorem ipsum dolor
+                        sit
+                        amet consectetur. Tempor aliquet id vitae lectus vulputate ut ut suspendisse ornare. Vel
+                        scelerisque sem hendrerit arcu. Ut dictum sollicitudin non est consectetur massa augue.
+                        Potenti
+                        sollicitudin id tellus nunc ipsum magna. Lorem ipsum dolor sit amet consectetur. Lorem ipsum
+                        dolor sit amet consectetur. Tempor aliquet id vitae lectus vulputate ut ut suspendisse ornare.
+                        Vel scelerisque sem hendrerit arcu. Ut dictum sollicitudin non est consectetur massa augue.
+                        Potenti sollicitudin id tellus nunc ipsum magna. Lorem ipsum dolor sit amet consectetur. Tempor
+                        aliquet id vitae lectus vulputate ut ut suspendisse ornare. Vel scelerisque sem hendrerit arcu.
+                        Ut dictum sollicitudin non est consectetur massa augue. Potenti sollicitudin id tellus nunc
+                        ipsum magna. Lorem ipsum dolor sit amet consectetur.
+                        leading-snug
+                        Lorem ipsum dolor sit amet consectetur. Tempor aliquet id vitae lectus vulputate ut ut
+                        suspendisse ornare. Vel scelerisque sem hendrerit arcu. Ut dictum sollicitudin non est
+                        consectetur massa augue.
+                    </div>
+                    <div class="flex pb-1.5">
+                        <div class="hidden xl:flex pr-2.5 pt-1.5 w-2/12"><img src="./css/aboutUs/ab2.png" alt="">
+                        </div>
+                        <div>
+                            <div class="text-lg md:text-xl font-bold">Cộng đồng Kỹ sư tận tâm, chuyên nghiệp, yêu nghề
+                            </div>
+                            <div class="text-gray-500">Lorem ipsum dolor sit amet consectetur. Tempor aliquet id
+                                vitae
+                                lectus vulputate ut ut
+                                suspendisse ornare. Vel scelerisque sem hendrerit arcut dictum.</div>
+                        </div>
+                    </div>
+                    <div class="flex pb-2">
+                        <div class="hidden xl:flex pr-2.5 pt-1.5 w-2/12"><img src="./css/aboutUs/ab1.png" alt="">
+                        </div>
+                        <div>
+                            <div class="text-lg md:text-xl font-bold">Các sản phẩm có chất lượng tốt nhất</div>
+                            <div class="text-gray-500">Lorem ipsum dolor sit amet consectetur. Tempor aliquet id
+                                vitae
+                                lectus vulputate ut ut
+                                suspendisse ornare. Vel scelerisque sem hendrerit arcut dictum.</div>
+                        </div>
+                    </div>
+                    <div class="flex justify-around text-xs md:text-base lg:justify-start">
+                        <div
+                            class="flex justify-center items-center border bg-orange-500 text-xs md:text-base text-white md:mr-3">
+                            <a class="flex justify-between bg-orange-500 p-3" href="#ad">Xem
+                                tất cả bản
+                                vẽ&nbsp;<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div
+                            class="flex justify-center items-center border bg-blue-500 text-xs md:text-base text-white px-5">
+                            <a class="flex justify-between bg-blue-500 p-3" href="#ad"><svg
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+                                </svg>&nbsp;Liên hệ ngay
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="hidden lg:flex bg-blue-600 justify-around mx-56">
+        <div class="p-5"><img src="./css/aboutUs/iconAb1.png" alt=""></div>
+        <div class="p-5"><img src="./css/aboutUs/iconAb2.png" alt=""></div>
+        <div class="p-5"><img src="./css/aboutUs/iconAb3.png" alt=""></div>
+        <div class="p-5"><img src="./css/aboutUs/iconAb4.png" alt=""></div>
+    </div>
+    <div class="carousel-guess">
+        <style>
+            .swiper {
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+            }
+
+            .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .swiper-slide img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .ki {
+                margin: 0% 0%;
+            }
+        </style>
+        <!-- Swiper -->
+        <div class="swiper mySwip" style="background-image: url(./css/news/backgroundFeed.png);">
+            <div class="flex-col justify-around text-white pt-16 px-4">
+                <div class="text-2xl flex md:text-3xl lg:text-4xl font-bold py-5">Cảm Nhận Khách Hàng</div>
+                <div class="flex justify-between">
+                    <div class="w-3/5">Chúng tôi luôn nỗ lực tạo ra một cộng đồng quy tụ đội ngũ kỹ sư giỏi và
+                        tâm huyết</div>
+                    <div class="relative">
+                        <svg class="swiper-button-next" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                        </svg>
+                        <svg class="swiper-button-prev" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-wrapper" style="margin: 5% auto;">
+                <img class="swiper-slide" src="./css/news/guess1.png" alt="guess9">
+                <img class="swiper-slide" src="./css/news/guess2.png" alt="guess8">
+                <img class="swiper-slide" src="./css/news/guess3.png" alt="guess7">
+                <img class="swiper-slide" src="./css/news/guess1.png" alt="guess6">
+                <img class="swiper-slide" src="./css/news/guess2.png" alt="guess5">
+                <img class="swiper-slide" src="./css/news/guess3.png" alt="guess4">
+                <img class="swiper-slide" src="./css/news/guess1.png" alt="guess1">
+                <img class="swiper-slide" src="./css/news/guess2.png" alt="guess2">
+                <img class="swiper-slide" src="./css/news/guess3.png" alt="guess3">
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwip", {
+                slidesPerView: 2,
+                spaceBetween: 5,
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1
+                    },
+                    570: {
+                        slidesPerView: 2
+                    },
+                    1024: {
+                        slidesPerView: 3
+                    }
+                }
+            });
+        </script>
+    </div>
+    <section class="flex flex-col items-center">
+        <div class="container w-11/12 xl:w-full">
+            <div class="text-lg flex md:text-3xl lg:text-4xl font-bold py-3 md:flex md:flex-row lg:flex lg:flex-row">
+                <div class="text-blue-500">Tin Tức, Bài Viết</div>&nbsp;Mới Nhất
+            </div>
+            <div class="pb-5">Cập nhập tin tức, bài viết, thảo luận về chuyên ngành</div>
+            <div class="news-content flex flex-wrap justify-between">
+                <div class="left-news-content hidden lg:flex lg:flex-col w-1/3 h-24 pr-5" style="height: 100%;">
+                    <div><img src="./css/footer/smPic.jpg" class="w-full" alt=""></div>
+                    <div class="text-base md:text-lg font-semibold py-2.5">Cần tìm KTS thiết kế biệt thự tân cổ điển
+                        3
+                        tầng ở
+                        khu
+                        vực
+                        Hưng Yên</div>
+                    <div class="text-xs md:text-sm text-blue-500 flex italic pb-3.5">Nguyễn Hà Trung &nbsp;<div
+                            class="text-black opacity-50">Lúc
+                            12:30-12/06/2023
+                        </div>
+                    </div>
+                    <div class="text-sm md:text-base opacity-70 border-b border-black border-opacity-50 pb-5">Lorem
+                        ipsum dolor sit amet
+                        consectetur. Tempor aliquet
+                        id vitae lectus vulputate ut ut
+                        suspendisse ornare. Vel scelerisque sem hendrerit arcu. Ut dictum sollicitudin non est
+                        consectetur massa augue...</div>
+                    <div class="flex mini-content1 pt-5 mb-2.5">
+                        <div><img src="./css/news/left-icon2.png" alt=""></div>
+                        <div class="ml-3.5">
+                            <div>Cần tìm KTS thiết kế biệt thự tân cổ điển 3 tầng ở khu vực Hưng Yên</div>
+                            <div class="flex">
+                                <div class="text-xs md:text-sm text-blue-500 flex italic">Nguyễn Hà Trung &nbsp;
+                                </div>
+                                <div class="text-black opacity-50">Lúc 12:30-12/06/2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex mini-content2">
+                        <div><img src="./css/news/left-icon1.png" alt=""></div>
+                        <div class="ml-3.5">
+                            <div>Cần tìm KTS thiết kế biệt thự tân cổ điển 3 tầng ở khu vực Hưng Yên</div>
+                            <div class="flex">
+                                <div class="text-xs md:text-sm text-blue-500 flex italic">Nguyễn Hà Trung &nbsp;
+                                </div>
+                                <div class="text-black opacity-50">Lúc 12:30-12/06/2023</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="middle-news-content hidden lg:flex lg:flex-col w-1/3 h-24 px-2.5" style="height: 100%;">
+                    <div><img src="./css/news/left-news.png" class="w-full" alt=""></div>
+                    <div class="text-base md:text-lg font-semibold py-2.5">Cần tìm KTS thiết kế biệt thự tân cổ điển
+                        3
+                        tầng ở
+                        khu
+                        vực
+                        Hưng Yên</div>
+                    <div class="text-xs md:text-sm text-blue-500 flex italic pb-3.5">Nguyễn Hà Trung &nbsp;<div
+                            class="text-black opacity-50">Lúc
+                            12:30-12/06/2023
+                        </div>
+                    </div>
+                    <div class="text-sm md:text-base opacity-70 border-b border-black border-opacity-50 pb-5">Lorem
+                        ipsum dolor sit amet
+                        consectetur. Tempor aliquet
+                        id vitae lectus vulputate ut ut
+                        suspendisse ornare. Vel scelerisque sem hendrerit arcu. Ut dictum sollicitudin non est
+                        consectetur massa augue...</div>
+                    <div class="flex mini-content1 pt-5 mb-2.5">
+                        <div><img src="./css/news/left-icon2.png" alt=""></div>
+                        <div class="ml-3.5">
+                            <div>Cần tìm KTS thiết kế biệt thự tân cổ điển 3 tầng ở khu vực Hưng Yên</div>
+                            <div class="flex">
+                                <div class="text-xs md:text-sm text-blue-500 flex italic">Nguyễn Hà Trung &nbsp;
+                                </div>
+                                <div class="text-black opacity-50">Lúc 12:30-12/06/2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex mini-content2">
+                        <div><img src="./css/news/left-icon1.png" alt=""></div>
+                        <div class="ml-3.5">
+                            <div>Cần tìm KTS thiết kế biệt thự tân cổ điển 3 tầng ở khu vực Hưng Yên</div>
+                            <div class="flex">
+                                <div class="text-xs md:text-sm text-blue-500 flex italic">Nguyễn Hà Trung &nbsp;
+                                </div>
+                                <div class="text-black opacity-50">Lúc 12:30-12/06/2023</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-news-content w-full lg:w-1/3 h-24 lg:pl-2.5" style="height: 100%;">
+                    <div class="text-xl font-bold md:text-2xl border-b border-blue-600 pb-3.5">Bài viết gần đây
+                    </div>
+                    <div class="border-b border-black border-opacity-50 pb-5">
+                        <div class="text-base md:text-lg font-semibold py-2.5">Cần tìm KTS thiết kế biệt thự tân cổ
+                            điển
+                            3
+                            tầng ở
+                            khu
+                            vực
+                            Hưng Yên</div>
+                        <div class="flex lg:hidden"><img src="./css/footer/smPic.jpg" style="width: 99%;" alt="">
+                        </div>
+                        <div class="text-sm md:text-base opacity-70 pb-3">Lorem
+                            ipsum dolor sit amet
+                            consectetur. Tempor aliquet
+                            id vitae lectus vulputate ut ut
+                            suspendisse ornare. Vel scelerisque...
+                        </div>
+                        <div class="flex">
+                            <div class="text-xs md:text-sm text-blue-500 font-bold flex pb-3.5">Nguyễn Hà Trung
+                                &nbsp;
+                            </div>
+                            <div class="text-black italic opacity-50">Lúc 12:30-12/06/2023</div>
+                        </div>
+                    </div>
+                    <div class="border-b border-black border-opacity-50 pb-5">
+                        <div class="text-base md:text-lg font-semibold py-2.5">Cần tìm KTS thiết kế biệt thự tân cổ
+                            điển
+                            3
+                            tầng ở
+                            khu
+                            vực
+                            Hưng Yên</div>
+                        <div class="flex lg:hidden"><img src="./css/news/left-news.png" style="width: 99%;" alt="">
+                        </div>
+                        <div class="text-sm md:text-base opacity-70 pb-3">Lorem
+                            ipsum dolor sit amet
+                            consectetur. Tempor aliquet
+                            id vitae lectus vulputate ut ut
+                            suspendisse ornare. Vel scelerisque...
+                        </div>
+                        <div class="flex">
+                            <div class="text-xs md:text-sm text-blue-500 font-bold flex pb-3.5">Nguyễn Hà Trung
+                                &nbsp;
+                            </div>
+                            <div class="text-black italic opacity-50">Lúc 12:30-12/06/2023</div>
+                        </div>
+                    </div>
+                    <div class="border-b border-black border-opacity-50 pb-5">
+                        <div class="text-base md:text-lg font-semibold py-2.5">Cần tìm KTS thiết kế biệt thự tân cổ
+                            điển
+                            3
+                            tầng ở
+                            khu
+                            vực
+                            Hưng Yên</div>
+                        <div class="flex lg:hidden"><img src="./css/news/middle-news.png" style="width: 99%;" alt="">
+                        </div>
+                        <div class="text-sm md:text-base opacity-70 pb-3">Lorem
+                            ipsum dolor sit amet
+                            consectetur. Tempor aliquet
+                            id vitae lectus vulputate ut ut
+                            suspendisse ornare. Vel scelerisque...
+                        </div>
+                        <div class="flex">
+                            <div class="text-xs md:text-sm text-blue-500 font-bold flex pb-3.5">Nguyễn Hà Trung
+                                &nbsp;
+                            </div>
+                            <div class="text-black italic opacity-50">Lúc 12:30-12/06/2023</div>
+                        </div>
+                    </div>
+                    <div class="border-b border-black border-opacity-50 pb-5">
+                        <div class="text-base md:text-lg font-semibold py-2.5">Cần tìm KTS thiết kế biệt thự tân cổ
+                            điển
+                            3
+                            tầng ở
+                            khu
+                            vực
+                            Hưng Yên</div>
+                        <div class="flex lg:hidden"><img src="./css/footer/smPic2.jpg" style="width: 99%;" alt="">
+                        </div>
+                        <div class="text-sm md:text-base opacity-70 pb-3">Lorem
+                            ipsum dolor sit amet
+                            consectetur. Tempor aliquet
+                            id vitae lectus vulputate ut ut
+                            suspendisse ornare. Vel scelerisque...
+                        </div>
+                        <div class="flex">
+                            <div class="text-xs md:text-sm text-blue-500 font-bold flex pb-3.5">Nguyễn Hà Trung
+                                &nbsp;
+                            </div>
+                            <div class="text-black italic opacity-50">Lúc 12:30-12/06/2023</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center p-3">
+                        <div class="text-sm md:text-base font-medium text-orange-500 mr-1"><a
+                                class="no-underline pointer-events-none" href="#">Xem Thêm các bài
+                                viết khác</a>
+                        </div>
+                        <div class="text-orange-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="flex justify-center items-center text-xs md:text-base text-white my-6" id="jg">
+        <a class="flex justify-between bg-orange-500 p-3" href="#jg">Xem
+            tất cả bản
+            vẽ&nbsp;<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+            </svg>
+
+
+        </a>
+    </div>
+    <section class="justify-center flex flex-col items-center mb-10">
+        <div class="container w-11/12 xl:w-full">
+            <div
+                class="text-2xl flex md:text-3xl lg:text-4xl font-bold flex-col md:flex md:flex-row lg:flex lg:flex-row my-3">
+                Thư Viện Hình Ảnh
+            </div>
+            <div class="flex justify-between">
+                <div class="mb-3 w-3/6">Cập nhật hình ảnh liên quan về chuyên ngành</div>
+                <div class="relative">
+                    <svg class="swiper-button-next" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                    <svg class="swiper-button-prev" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                    </svg>
+                </div>
+            </div>
+            <style>
+                .custom-slide {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr) !important;
+                    grid-gap: 1% !important;
+                }
+
+                .image-container {
+                    position: relative;
+                }
+
+                .image-content {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    color: white;
+                    padding: 8px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    width: 100%;
+                }
+            </style>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide image-container">
+                        <img src="./css/libraryImage/bigImage.png" alt="1">
+                        <div class="image-content">
+                            <div class="text-lg md:text-2xl font-semibold">Hình ảnh thực tế tại công trình</div>
+                            <div class="text-xs md:text-base">125 Hình ảnh</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide custom-slide">
+                        <div class="image-container">
+                            <img src="./css/libraryImage/smallImage1.png" alt="1-1">
+                            <div class="image-content">
+                                <div class="hidden sm:block sm:text-lg md:text-xl">Hình ảnh thực tế tại công trình</div>
+                                <div class="text-xs md:text-base">125 Hình ảnh</div>
+                            </div>
+                        </div>
+                        <div class="image-container">
+                            <img src="./css/libraryImage/smallImage2.png" alt="1-2">
+                            <div class="image-content">
+                                <div class="hidden sm:block sm:text-lg md:text-xl">Hình ảnh thực tế tại công trình</div>
+                                <div class="text-xs md:text-base">125 Hình ảnh</div>
+                            </div>
+                        </div>
+                        <div class="image-container">
+                            <img src="./css/libraryImage/smallImage3.png" alt="1-3">
+                            <div class="image-content">
+                                <div class="hidden sm:block sm:text-lg md:text-xl">Hình ảnh thực tế tại công trình</div>
+                                <div class="text-xs md:text-base">125 Hình ảnh</div>
+                            </div>
+                        </div>
+                        <div class="image-container">
+                            <img src="./css/libraryImage/smallImage4.png" alt="1-4">
+                            <div class="image-content">
+                                <div class="hidden sm:block sm:text-lg md:text-xl">Hình ảnh thực tế tại công trình</div>
+                                <div class="text-xs md:text-base">125 Hình ảnh</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide image-container">
+                        <img src="./css/footer/smPic.jpg" alt="2">
+                        <div class="image-content">
+                            <div class="text-lg md:text-2xl font-semibold">Hình ảnh thực tế tại công trình</div>
+                            <div class="text-xs md:text-base">125 Hình ảnh</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide custom-slide">
+                        <div class="image-container">
+                            <img src="./css/footer/smPic5.jpg" alt="2-1">
+                            <div class="image-content">
+                                <div class="hidden sm:block sm:text-lg md:text-xl">Hình ảnh thực tế tại công trình</div>
+                                <div class="text-xs md:text-base">125 Hình ảnh</div>
+                            </div>
+                        </div>
+                        <div class="image-container">
+                            <img src="./css/footer/smPic3.jpg" alt="2-2">
+                            <div class="image-content">
+                                <div class="hidden sm:block sm:text-lg md:text-xl">Hình ảnh thực tế tại công trình</div>
+                                <div class="text-xs md:text-base">125 Hình ảnh</div>
+                            </div>
+                        </div>
+                        <div class="image-container">
+                            <img src="./css/footer/smPic4.jpg" alt="2-3">
+                            <div class="image-content">
+                                <div class="hidden sm:block sm:text-lg md:text-xl">Hình ảnh thực tế tại công trình</div>
+                                <div class="text-xs md:text-base">125 Hình ảnh</div>
+                            </div>
+                        </div>
+                        <div class="image-container">
+                            <img src="./css/libraryImage/smallImage4.png" alt="2-4">
+                            <div class="image-content">
+                                <div class="hidden sm:block sm:text-lg md:text-xl">Hình ảnh thực tế tại công trình</div>
+                                <div class="text-xs md:text-base">125 Hình ảnh</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- Swiper JS -->
+            <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+            <!-- Initialize Swiper -->
+            <script>
+                var swiper = new Swiper(".mySwiper", {
+                    slidesPerView: 2,
+                    spaceBetween: 5,
+                    loop: true,
+                    pagination: {
+                        el: ".swiper-pagination",
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 1
+                        },
+                        768: {
+                            slidesPerView: 2
+                        },
+                        1024: {
+                            slidesPerView: 2
+                        }
+                    }
+                });
+            </script>
+        </div>
+    </section>
+    <section class="hidden md:flex flex-col items-center bg-slate-100">
+        <div class="container w-11/12 xl:w-full">
+            <div class="text-lg md:text-4xl font-bold pt-12">Thanh Toán Dễ Dàng</div>
+            <div class="font-semibold py-5">Hỗ trợ thanh toán quốc tế, các ví điện tử và 33 ngân hàng ở Việt Nam</div>
+            <div class="flex flex-col items-center pb-12">
+                <div class="flex justify-center" style="width: 11%;">
+                    <img class="bg-white box-border border-2 p-4" src="./css/bank/bank1.png" alt="">
+                    <img class="bg-white box-border border-2 p-4" src="./css/bank/bank2.png" alt="">
+                    <img class="bg-white box-border border-2 p-4" src="./css/bank/bank3.png" alt="">
+                    <img class="bg-white box-border border-2 p-4" src="./css/bank/bank4.png" alt="">
+                    <img class="bg-white box-border border-2 p-4" src="./css/bank/bank5.png" alt="">
+                    <img class="bg-white box-border border-2 p-4" src="./css/bank/bank6.png" alt="">
+                    <img class="bg-white box-border border-2 p-4" src="./css/bank/bank7.png" alt="">
+                    <img class="bg-white box-border border-2 p-4" src="./css/bank/bank8.png" alt="">
+                    <img class="bg-white box-border border-2 p-4" src="./css/bank/bank9.png" alt="">
+                </div>
+                <div class="flex justify-center" style="width: 11%;">
+                    <img class="bg-white box-border border-2 p-4" src="./css/bank/bank10.png" alt="">
+                    <img class="bg-white box-border border-2 p-4" src="./css/bank/bank11.png" alt="">
+                    <img class="bg-white box-border border-2 p-4" src="./css/bank/bank12.png" alt="">
+                    <img class="bg-white box-border border-2 p-4" src="./css/bank/bank13.png" alt="">
+                    <img class="bg-white box-border border-2 p-4" src="./css/bank/bank14.png" alt="">
+                    <img class="bg-white box-border border-2 p-4" src="./css/bank/bank15.png" alt="">
+                    <img class="bg-white box-border border-2 p-4" src="./css/bank/bank16.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="w-full text-white" style="background-image: url(./css/footer/backgroundFooter.png);">
+        <div
+            class="flex flex-col items-center justify-center lg:flex-row lg:items-start border-b border-slate-400 border-opacity-60 py-14">
+            <div class="flex flex-col items-center lg:items-start lg:pt-7 lg:w-1/4 lg:pl-14 lg:pr-3.5">
+                <img class="w-10/12 md:w-full" src="./css/logo.png" alt="">
+                <div class="w-10/12 md:w-full py-3 text-center">Chia sẻ tài liệu, bản vẽ, kiến thức ngành cơ điện. Cập
+                    nhật tin tức
+                    chuyên ngành
+                    trong nước và quốc tế.
+                </div>
+                <div class="flex items-start" id="boo">
+                    <a href="#boo"><img src="./css/footer/facebook.png" alt=""></a>
+                    <a href="#boo" class="ml-4"><img src="./css/footer/linkedin.png" alt=""></a>
+                    <a href="#boo" class="ml-4"><img src="./css/footer/youtube.png" alt=""></a>
+                    <a href="#boo" class="ml-4"><img src="./css/footer/facebook.png" alt=""></a>
+                </div>
+            </div>
+            <div class="flex flex-col items-center lg:items-start lg:w-1/4 lg:pt-7 lg:pr-3.5 lg:pl-16">
+                <div class="text-2xl font-medium pl-6">Link Nhanh</div>
+                <div>
+                    <button id="dropdownRightButton" data-dropdown-toggle="dropdownRight"
+                        data-dropdown-placement="bottom"
+                        class="mr-3 mb-3 md:mb-0 text-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:hover:bg-blue-700"
+                        type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            class="w-5 h-5">
+                            <path fill-rule="evenodd"
+                                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Về Chúng Tôi
+                        <path fill-rule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdownRight"
+                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownRightButton">
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
+                                    out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <button id="dropdownRightButton" data-dropdown-toggle="dropdownRight"
+                        data-dropdown-placement="bottom"
+                        class="mr-3 mb-3 md:mb-0 text-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:hover:bg-blue-700"
+                        type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            class="w-5 h-5">
+                            <path fill-rule="evenodd"
+                                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Quy Định Chung
+                        <path fill-rule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdownRight"
+                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownRightButton">
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
+                                    out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <button id="dropdownRightButton" data-dropdown-toggle="dropdownRight"
+                        data-dropdown-placement="bottom"
+                        class="mr-3 mb-3 md:mb-0 text-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:hover:bg-blue-700"
+                        type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            class="w-5 h-5">
+                            <path fill-rule="evenodd"
+                                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Chính Sách
+                        <path fill-rule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdownBottom"
+                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownBottomButton">
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
+                                    out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <button id="dropdownBottomButton" data-dropdown-toggle="dropdownBottom"
+                        data-dropdown-placement="bottom"
+                        class="mr-3 mb-3 md:mb-0 text-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:hover:bg-blue-700"
+                        type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            class="w-5 h-5">
+                            <path fill-rule="evenodd"
+                                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Hướng Dẫn Sử Dụng
+                        <path fill-rule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdownBottom"
+                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownBottomButton">
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
+                                    out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <button id="dropdownBottomButton" data-dropdown-toggle="dropdownBottom"
+                        data-dropdown-placement="bottom"
+                        class="mr-3 mb-3 md:mb-0 text-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:hover:bg-blue-700"
+                        type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            class="w-5 h-5">
+                            <path fill-rule="evenodd"
+                                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Tin Tức
+                        <path fill-rule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdownBottom"
+                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownBottomButton">
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
+                                    out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <button id="dropdownBottomButton" data-dropdown-toggle="dropdownBottom"
+                        data-dropdown-placement="bottom"
+                        class="mr-3 mb-3 md:mb-0 text-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:hover:bg-blue-700"
+                        type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            class="w-5 h-5">
+                            <path fill-rule="evenodd"
+                                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Hợp Tác
+                        <path fill-rule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdownBottom"
+                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownBottomButton">
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
+                                    out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <script>
+                    // JavaScript code to handle dropdown functionality
+                    document.addEventListener('DOMContentLoaded', function () {
+                        var dropdownButtons = document.querySelectorAll('[data-dropdown-toggle="dropdownBottom"]');
+                        dropdownButtons.forEach(function (button) {
+                            button.addEventListener('click', function () {
+                                var dropdownId = this.getAttribute('data-dropdown-toggle');
+                                var dropdown = document.getElementById(dropdownId);
+                                dropdown.classList.toggle('hidden');
+                            });
+                        });
+                    });
+                </script>
+            </div>
+            <div class="flex flex-col items-center lg:items-start lg:w-1/4 lg:pt-7 lg:pr-3.5">
+                <div class="text-2xl font-medium">Hỗ Trợ Khách Hàng</div>
+                <div class="flex flex-col">
+                    <div class="flex">
+                        <div class="flex items-center pr-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                class="w-5 h-5">
+                                <path fill-rule="evenodd"
+                                    d="M10 3c-4.31 0-8 3.033-8 7 0 2.024.978 3.825 2.499 5.085a3.478 3.478 0 01-.522 1.756.75.75 0 00.584 1.143 5.976 5.976 0 003.936-1.108c.487.082.99.124 1.503.124 4.31 0 8-3.033 8-7s-3.69-7-8-7zm0 8a1 1 0 100-2 1 1 0 000 2zm-2-1a1 1 0 11-2 0 1 1 0 012 0zm5 1a1 1 0 100-2 1 1 0 000 2z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="py-3">
+                            <div>0988 888 999</div>
+                            <div>0912 456 789</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <div class="flex">
+                        <div class="flex items-center pr-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                class="w-5 h-5">
+                                <path fill-rule="evenodd"
+                                    d="M2.106 6.447A2 2 0 001 8.237V16a2 2 0 002 2h14a2 2 0 002-2V8.236a2 2 0 00-1.106-1.789l-7-3.5a2 2 0 00-1.788 0l-7 3.5zm1.48 4.007a.75.75 0 00-.671 1.342l5.855 2.928a2.75 2.75 0 002.46 0l5.852-2.926a.75.75 0 10-.67-1.342l-5.853 2.926a1.25 1.25 0 01-1.118 0l-5.856-2.928z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="pb-3">
+                            <div>hotro@shopcodien.com</div>
+                            <div>support@shopcodien.com</div>
+                        </div>
+                    </div>
+                </div>
+                <div><img src="./css/footer/iconFooter.png" alt=""></div>
+            </div>
+            <div class="flex flex-col items-center lg:items-start lg:w-1/4 lg:pt-7 lg:pr-14">
+                <div class="text-2xl font-medium">Tư Vấn Miễn Phí</div>
+                <div class="w-10/12 md:w-full py-3 text-center lg:text-start">Quý khách vui lòng để lại E-mail để nhận
+                    tư vấn miễn phí
+                    sớm nhất từ
+                    Shopcodien.com
+                </div>
+                <div class="relative flex justify-end items-center">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                        </svg>
+                    </div>
+                    <input type="text" id="email-address-icon"
+                        class="bg-white border border-gray-300 text-gray-900 text-sm rounded-sm block w-full pl-10 p-2.5"
+                        placeholder="name@flowbite.com">
+                    <div class="absolute bg-orange-400 p-1 rounded-sm mr-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <path fill-rule="evenodd"
+                                d="M13.75 7h-3V3.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0L6.2 4.74a.75.75 0 001.1 1.02l1.95-2.1V7h-3A2.25 2.25 0 004 9.25v7.5A2.25 2.25 0 006.25 19h7.5A2.25 2.25 0 0016 16.75v-7.5A2.25 2.25 0 0013.75 7zm-3 0h-1.5v5.25a.75.75 0 001.5 0V7z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center py-3">
+            <div class="px-10 text-center">Copyrights 2023 © Shopcodien.com. Thiết kế và phát triển bởi Tech5S</div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
